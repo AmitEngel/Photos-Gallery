@@ -15,6 +15,10 @@ export const fetchPhotos = (category, currentPage) => {
       }
 
       const data = await response.json();
+      if (data.length === 0) { //checking if there are any photos on this category
+        alert("There are no photos in this category")
+        return
+      }
       dispatch(photosActions.fetchPhotosSuccess(data));
 
     } catch (error) {
