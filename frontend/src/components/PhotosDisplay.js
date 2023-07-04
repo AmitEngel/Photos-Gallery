@@ -100,12 +100,16 @@ const PhotosDisplay = () => {
               xs={12}
               sm={6}
               md={4}
-              className={`slide-item ${
+              className={`mb-2 mt-2 slide-item ${
                 index % 3 === 0 ? "slide-left" : "slide-right"
               }`}
             >
               <Card onClick={() => setSelectedPhoto(photo)}>
-                <Card.Img variant="top" src={photo.webformatURL} />
+                <Card.Img
+                  variant="top"
+                  src={photo.webformatURL}
+                  className="fixed-size-img rounded"
+                />
               </Card>
             </Col>
           ))}
