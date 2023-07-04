@@ -1,0 +1,64 @@
+.slide-in {
+    animation: slide-in 0.5s ease forwards;
+}
+
+.slide-item {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.slide-item:hover .card {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.slide-left {
+    animation-name: slide-left;
+}
+
+.slide-right {
+    animation-name: slide-right;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.spinner {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+}
